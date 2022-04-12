@@ -37,7 +37,9 @@
                         {{-- HOME --}}
                         <li class="mr-2"><a href="{{ route('admin.home') }}">Home</a></li>
                         {{-- POST --}}
-                        <li><a href="{{ route('admin.posts.index') }}">Post</a></li>
+                        <li class="mr-2"><a href="{{ route('admin.posts.index') }}">Post</a></li>
+                        {{-- TAG --}}
+                        <li><a href="{{ route('admin.tags.index') }}">Tag</a></li>
 
                     </ul>
 

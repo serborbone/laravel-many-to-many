@@ -6,8 +6,12 @@
 
     <h1>{{$post->title}}</h1>
     <div>Testo: {{$post->content}}</div>
-    <div>Categoria: {{$post->category->name}}</div>
+    <div>Categoria: {{isset($post->category->name) ? $post->category->name: 'N.D.'}}</div>
     <div>Slug: {{$post->slug}}</div>
+  
+    @foreach ($post->tags as $tag)
+        <span class="badge badge-primary p-2 mt-2">{{$tag->name}}</span>
+    @endforeach
 
     <div class="mt-5">
       <a href="{{route('admin.posts.index')}}" class="btn btn-success">Torna alla lista</a>
